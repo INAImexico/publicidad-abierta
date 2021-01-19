@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS `vtab_proveedores`;
+DROP VIEW IF EXISTS `vtab_proveedores`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`tpov1_user_views`@`%` SQL SECURITY DEFINER VIEW `vtab_proveedores`  AS  select `a`.`id_proveedor` AS `id_proveedor`,
 `b`.`ejercicio` AS `ejercicio`,`a`.`nombre_razon_social` AS `nombre`,(select count(0) from `tab_contratos` `c` where 

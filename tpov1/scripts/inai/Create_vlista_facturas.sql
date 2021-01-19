@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS `vlista_facturas`;
+DROP VIEW IF EXISTS `vlista_facturas`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`tpov1_user_views`@`%` SQL SECURITY DEFINER VIEW `vlista_facturas`  AS  select `tab_facturas`.`id_factura` AS `id_factura`,
 (select `c`.`ejercicio` from `cat_ejercicios` `c` where (`tab_facturas`.`id_ejercicio` = `c`.`id_ejercicio`)) AS `ejercicio`,(select `e`.`numero_contrato` 
